@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "duolingo-drag-and-drop",
-    "slug": "duolingo-drag-and-drop",
+    "name": "season4",
+    "slug": "season4",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,14 +19,11 @@
     "ios": {
       "supportsTablet": true
     },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "experiments": {
+      "turboModules": true
     }
   }
 }
