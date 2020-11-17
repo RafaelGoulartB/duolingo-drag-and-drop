@@ -45,8 +45,7 @@
 - [License](#closed_book-license)
 
 <div align="center">
-  <img src=".github/screenshot-1.jpeg" width="220">
-  <img src=".github/screenshot-2.jpeg" width="220">
+  <img src=".github/screenshot-1.jpeg" width="420">
 </div>
 
 # :computer: Technologies
