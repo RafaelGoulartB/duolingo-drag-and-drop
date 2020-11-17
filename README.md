@@ -23,7 +23,7 @@
    </a>
 </p>
 
-> Duolingo Drag-and-drop feature made with React Native.
+> Duolingo Drag-and-drop feature made with React Native. Made using this [video](https://www.youtube.com/watch?v=tHWGKdpj1rs).
 
 <div align="center">
   <sub>The Duolingo app project. Built with ❤︎ by
