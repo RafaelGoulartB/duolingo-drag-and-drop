@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     padding: 4
   },
   container: {
-    padding: 8,
+    padding: 6,
     borderRadius: 8,
     borderWidth: 1,
     borderColor: '#E8E6E8',
