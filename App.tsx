@@ -1,21 +1,56 @@
-import { StatusBar } from 'expo-status-bar'
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { createStackNavigator } from '@react-navigation/stack'
 
-export default function App() {
+import { Routes } from './src/Routes'
+import Examples from './src/Examples'
+import Rainbow from './src/Rainbow'
+import Duolingo, { assets as duolingoAssets } from './src/Duolingo'
+import { LoadAssets } from './src/components'
+
+const fonts = {
+  'SFProDisplay-Bold': require('./assets/fonts/SFPro/SF-Pro-Display-Bold.otf'),
+  'SFProDisplay-Semibold': require('./assets/fonts/SFPro/SF-Pro-Display-Semibold.otf'),
+  'SFProDisplay-Regular': require('./assets/fonts/SFPro/SF-Pro-Display-Regular.otf'),
+  'SFProDisplay-Medium': require('./assets/fonts/SFPro/SF-Pro-Display-Medium.otf'),
+  'Nunito-Bold': require('./assets/fonts/Nunito/Nunito-Bold.ttf'),
+  'Nunito-Regular': require('./assets/fonts/Nunito/Nunito-Regular.ttf')
+}
+
+const assets = [...duolingoAssets]
+
+const Stack = createStackNavigator<Routes>()
+const AppNavigator = () => (
+  <Stack.Navigator>
+    <Stack.Screen
+      name="Examples"
+      component={Examples}
+      options={{
+        title: 'Can it be done in React Native?'
+      }}
+    />
+    <Stack.Screen
+      name="Duolingo"
+      component={Duolingo}
+      options={{
+        title: '🦉 Duolingo'
+      }}
+    />
+    <Stack.Screen
+      name="Rainbow"
+      component={Rainbow}
+      options={{
+        title: '🌈 Rainbow'
+      }}
+    />
+  </Stack.Navigator>
+)
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <LoadAssets assets={assets} fonts={fonts}>
+      <AppNavigator />
+    </LoadAssets>
   )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-})
+export default App
