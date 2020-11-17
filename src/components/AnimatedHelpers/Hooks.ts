@@ -10,7 +10,7 @@ export const useConst = <T>(initialValue: T | (() => T)): T => {
       value:
         typeof initialValue === "function"
           ? // eslint-disable-next-line @typescript-eslint/ban-types
-            (initialValue as Function)()
+          (initialValue as Function)()
           : initialValue,
     };
   }

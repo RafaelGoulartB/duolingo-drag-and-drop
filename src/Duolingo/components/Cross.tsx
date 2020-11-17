@@ -1,7 +1,7 @@
-import * as React from "react";
-import Svg, { Path } from "react-native-svg";
+import * as React from 'react'
+import Svg, { Path } from 'react-native-svg'
 
-export const CROSS_SIZE = 24;
+export const CROSS_SIZE = 24
 
 const Cross = () => {
   return (
@@ -14,7 +14,7 @@ const Cross = () => {
         strokeLinejoin="round"
       />
     </Svg>
-  );
-};
+  )
+}
 
-export default Cross;
+export default Cross

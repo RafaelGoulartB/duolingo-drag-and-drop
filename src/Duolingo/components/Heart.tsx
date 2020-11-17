@@ -1,8 +1,8 @@
 /* eslint-disable max-len */
-import * as React from "react";
-import Svg, { Path, Circle } from "react-native-svg";
+import * as React from 'react'
+import Svg, { Path, Circle } from 'react-native-svg'
 
-export const HEART_SIZE = 35;
+export const HEART_SIZE = 35
 
 const Heart = () => {
   return (
@@ -17,7 +17,7 @@ const Heart = () => {
       />
       <Circle cx={7} cy={7} r={3} fill="#FF7977" />
     </Svg>
-  );
-};
+  )
+}
 
-export default Heart;
+export default Heart

@@ -1,19 +1,19 @@
-import * as React from "react";
-import { View, Dimensions } from "react-native";
-import Svg, { G, Path } from "react-native-svg";
+import * as React from 'react'
+import { View, Dimensions } from 'react-native'
+import Svg, { G, Path } from 'react-native-svg'
 
-import { CROSS_SIZE } from "./Cross";
-import { HEART_SIZE } from "./Heart";
+import { CROSS_SIZE } from './Cross'
+import { HEART_SIZE } from './Heart'
 
-const width = Dimensions.get("window").width - 16 * 4 - CROSS_SIZE - HEART_SIZE;
+const width = Dimensions.get('window').width - 16 * 4 - CROSS_SIZE - HEART_SIZE
 
 const SvgComponent = () => {
   return (
     <View
       style={{
         flex: 1,
-        flexDirection: "row",
-        justifyContent: "center",
+        flexDirection: 'row',
+        justifyContent: 'center'
       }}
     >
       <Svg width={width} height={(width * 11) / 111} viewBox="0 0 111 11">
@@ -24,7 +24,7 @@ const SvgComponent = () => {
         </G>
       </Svg>
     </View>
-  );
-};
+  )
+}
 
-export default SvgComponent;
+export default SvgComponent

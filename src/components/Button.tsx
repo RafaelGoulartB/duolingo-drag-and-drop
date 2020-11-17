@@ -1,28 +1,28 @@
-import * as React from "react";
-import { SafeAreaView, StyleSheet, View } from "react-native";
-import { RectButton } from "react-native-gesture-handler";
+import * as React from 'react'
+import { SafeAreaView, StyleSheet, View } from 'react-native'
+import { RectButton } from 'react-native-gesture-handler'
 
-import StyleGuide from "./StyleGuide";
-import Text from "./Text";
+import StyleGuide from './StyleGuide'
+import Text from './Text'
 
 interface ButtonProps {
-  label: string;
-  primary?: boolean;
-  onPress: () => void;
+  label: string
+  primary?: boolean
+  onPress: () => void
 }
 
 const styles = StyleSheet.create({
   container: {
-    padding: StyleGuide.spacing * 2,
+    padding: StyleGuide.spacing * 2
   },
   label: {
-    textAlign: "center",
-  },
-});
+    textAlign: 'center'
+  }
+})
 
 const Button = ({ label, primary, onPress }: ButtonProps) => {
-  const color = primary ? "white" : undefined;
-  const backgroundColor = primary ? StyleGuide.palette.primary : undefined;
+  const color = primary ? 'white' : undefined
+  const backgroundColor = primary ? StyleGuide.palette.primary : undefined
   return (
     <RectButton {...{ onPress }}>
       <SafeAreaView style={{ backgroundColor }} accessible>
@@ -33,7 +33,7 @@ const Button = ({ label, primary, onPress }: ButtonProps) => {
         </View>
       </SafeAreaView>
     </RectButton>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button
