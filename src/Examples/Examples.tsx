@@ -1,46 +1,42 @@
-import * as React from "react";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
-import { StackNavigationProp } from "@react-navigation/stack";
-import { useNavigation } from "@react-navigation/native";
-import { RectButton } from "react-native-gesture-handler";
+import * as React from 'react'
+import { ScrollView, StyleSheet, Text, View } from 'react-native'
+import { StackNavigationProp } from '@react-navigation/stack'
+import { useNavigation } from '@react-navigation/native'
+import { RectButton } from 'react-native-gesture-handler'
 
-import { Routes } from "../Routes";
-import { StyleGuide } from "../components";
+import { Routes } from '../Routes'
+import { StyleGuide } from '../components'
 
 export const examples = [
   {
-    screen: "Duolingo",
-    title: "🦉 Duolingo",
-  },
-  {
-    screen: "Rainbow",
-    title: "🌈 Rainbow",
-  },
-] as const;
+    screen: 'Duolingo',
+    title: '🦉 Duolingo'
+  }
+] as const
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: StyleGuide.palette.background,
+    backgroundColor: StyleGuide.palette.background
   },
   content: {
-    paddingBottom: 32,
+    paddingBottom: 32
   },
   thumbnail: {
-    backgroundColor: "white",
+    backgroundColor: 'white',
     padding: StyleGuide.spacing * 2,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: StyleGuide.palette.background,
+    borderColor: StyleGuide.palette.background
   },
   title: {
-    ...StyleGuide.typography.headline,
-  },
-});
+    ...StyleGuide.typography.headline
+  }
+})
 
 const Examples = () => {
-  const { navigate } = useNavigation<StackNavigationProp<Routes, "Examples">>();
+  const { navigate } = useNavigation<StackNavigationProp<Routes, 'Examples'>>()
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-      {examples.map((thumbnail) => (
+      {examples.map(thumbnail => (
         <RectButton
           key={thumbnail.screen}
           onPress={() => navigate(thumbnail.screen)}
@@ -51,7 +47,7 @@ const Examples = () => {
         </RectButton>
       ))}
     </ScrollView>
-  );
-};
+  )
+}
 
-export default Examples;
+export default Examples

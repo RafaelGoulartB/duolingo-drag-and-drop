@@ -35,13 +35,13 @@ const AppNavigator = () => (
         title: '🦉 Duolingo'
       }}
     />
-    {/* <Stack.Screen
+    <Stack.Screen
       name="Rainbow"
       component={Rainbow}
       options={{
-        title: "🌈 Rainbow",
+        title: '🌈 Rainbow'
       }}
-    /> */}
+    />
   </Stack.Navigator>
 )
 
